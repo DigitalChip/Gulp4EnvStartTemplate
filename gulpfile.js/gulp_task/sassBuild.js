@@ -9,8 +9,7 @@ const sassBuild = () => {
     .pipe($.gulp.dest($.path.sass.dest, {sourcemaps: $.appconfig.isDev}))
     .pipe($.glp.csso())                                         // сжатие css
     .pipe($.glp.rename({suffix: ".min"}))
-    .pipe($.gulp.dest($.path.sass.dest, {sourcemaps: $.appconfig.isDev}))
-;
+    .pipe($.gulp.dest($.path.sass.dest, {sourcemaps: $.appconfig.isDev}));
 }
 
 module.exports = sassBuild;
